@@ -1,0 +1,55 @@
+{
+  "version": "0.3.0",
+  "cases": [
+    {
+      "prompt": "Use Automousera Research to improve our semiconductor defect classifier. We have labeled data, a frozen macro-F1 evaluator, current baseline code, and want the agents to research alternatives, test hypotheses, critique the winner, and verify it.",
+      "should_trigger": true,
+      "mode": "autonomous-agent"
+    },
+    {
+      "prompt": "Run an autonomous research loop for predictive maintenance. Literature priors and code exist, but I want a critic agent to challenge the first winner and request follow-up experiments before final recommendation.",
+      "should_trigger": true,
+      "mode": "autonomous-agent"
+    },
+    {
+      "prompt": "Use Automousera on this robotics policy optimization benchmark. Metric, simulator, baseline and evaluator are already frozen; skip broad literature and start empirical search, then independent review and verification.",
+      "should_trigger": true,
+      "mode": "search-only"
+    },
+    {
+      "prompt": "I want Automousera to discover a better scheduling algorithm, but we have not decided the validation split or primary KPI yet.",
+      "should_trigger": true,
+      "mode": "benchmark-first"
+    },
+    {
+      "prompt": "Our first ERA winner looks suspiciously good. Use Automousera to inspect the ledger, challenge leakage, run targeted follow-ups, and re-verify the winner.",
+      "should_trigger": true,
+      "mode": "review-and-verify"
+    },
+    {
+      "prompt": "Research and optimize a digital-twin controller, but do not deploy or control physical equipment; keep all experiments offline and require human approval for any pilot recommendation.",
+      "should_trigger": true,
+      "mode": "autonomous-agent"
+    },
+    {
+      "prompt": "Summarize the latest papers on memory in robotics without running experiments.",
+      "should_trigger": false,
+      "mode": "literature-only"
+    },
+    {
+      "prompt": "Rewrite this executive email to sound more concise.",
+      "should_trigger": false,
+      "mode": "writing"
+    },
+    {
+      "prompt": "Explain what PUCT means in simple terms.",
+      "should_trigger": false,
+      "mode": "explanation"
+    },
+    {
+      "prompt": "Brainstorm possible AI use cases for a factory; we do not have data, code, simulator, benchmark, or evaluation plan and do not want one built yet.",
+      "should_trigger": false,
+      "mode": "brainstorm"
+    }
+  ]
+}
